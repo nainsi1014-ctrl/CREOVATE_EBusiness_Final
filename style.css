@@ -1,0 +1,34 @@
+
+:root{--bg:#F8FAFC;--fg:#0F172A;--muted:#475569;--primary:#0E6E6E;--accent:#22C55E;--card:#FFFFFF;--ring:#93C5FD;--radius:16px}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Arial}
+a{color:var(--primary);text-decoration:none}
+.container{max-width:1200px;margin:0 auto;padding:24px}
+.nav{position:sticky;top:0;z-index:10;display:flex;gap:16px;align-items:center;justify-content:space-between;padding:12px 24px;background:var(--card);box-shadow:0 6px 24px rgba(15,23,42,.06)}
+.nav .logo{display:flex;gap:10px;align-items:center;font-weight:800;color:var(--fg)}
+.nav .links a{padding:8px 12px;border-radius:10px}
+.nav .links a.current{background:#EEF2FF}
+.btn{background:var(--primary);color:white;padding:10px 14px;border-radius:12px;border:2px solid var(--primary);cursor:pointer;font-weight:600}
+.btn.ghost{background:transparent;color:var(--primary)}
+.btn:focus{outline:3px solid #93C5FD}
+.card{background:var(--card);border-radius:var(--radius);padding:20px;box-shadow:0 10px 30px rgba(15,23,42,.06)}
+.h1{font-size:40px;line-height:1.2;margin:0 0 8px}
+.h2{font-size:28px;margin:24px 0 8px}
+.h3{font-size:20px;margin:12px 0 6px}
+.p{color:var(--muted);line-height:1.7}
+.grid{display:grid;gap:16px}
+.grid.cols-3{grid-template-columns:repeat(3,1fr)}
+.grid.cols-2{grid-template-columns:repeat(2,1fr)}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{padding:10px;border-bottom:1px solid #e5e7eb;text-align:left}
+.input,.textarea{width:100%;padding:12px;border:1px solid #e5e7eb;border-radius:12px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.small{font-size:12px;color:#6b7280}
+.notice{background:#EFF6FF;border:1px solid #BFDBFE;color:#0C4A6E;padding:10px;border-radius:10px}
+.hero{display:grid;grid-template-columns:1.4fr 1fr;gap:24px;align-items:center;margin-top:12px}
+footer{margin-top:48px;padding:24px 0;border-top:1px solid #e5e7eb;color:var(--muted)}
+.invoice{max-width:900px;margin:24px auto;background:white;border:1px solid #e5e7eb;border-radius:16px;padding:28px;box-shadow:0 16px 40px rgba(15,23,42,.08)}
+.invoice header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px}
+.invoice .brand{font-weight:800;font-size:20px}
+@media(max-width:900px){.hero{grid-template-columns:1fr}.grid.cols-3{grid-template-columns:1fr}}
+@media print{.no-print{display:none!important}.invoice{box-shadow:none;border:none}}
